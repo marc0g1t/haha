@@ -1,118 +1,128 @@
 import Image from "next/image";
 import { Inter } from "next/font/google";
-
-const inter = Inter({ subsets: ["latin"] });
+import { useState } from "react";
 
 export default function Home() {
+  const [module, setModule] = useState(false);
+  const handlerClick = () => {
+    setModule(!module);
+  };
+
   return (
-    <main
-      className={`flex min-h-screen flex-col items-center justify-between p-24 ${inter.className}`}
-    >
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/pages/index.js</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <div className="h-screen w-screen relative">
+      <div className="bg-slate-100 h-[730px] w-screen flex items-center justify-center absolute">
+        <div className="flex">
+          <div className="w-[580px] scroll-pr-5">
+            <div className="pt-14 ml-[-32px]  ">
+              <Image src="ah.svg" width={350} height={350} />
+            </div>
+            <div className="text-3xl w-[500px] text-black ">
+              Connect with friends and the world around you on Facebook.
+            </div>
+          </div>
+          <div className="h-[456px] w-[396px] border-solid border-red-600 ">
+            <div className="w-[396px] h-[355px]    items-center  flex flex-col gap-4 bg-white rounded-lg p-4">
+              <input
+                placeholder="Email or phone number"
+                className="p-4 border-2 border-space-200 rounded-[5px] w-[364px] h-[52px] "
+              />
+              <input
+                placeholder="Password"
+                className="p-4 border-2 border-space-200 rounded-[5px] w-[364px] h-[52px]"
+              />
+              <div className="w-[364px] h-[48px] bg-[#0866ff] flex items-center justify-center text-white text-xl font-semibold rounded-lg py-4">
+                Log In
+              </div>
+              <div className="flex justify-center text-[#0866ff]">
+                Forgot password?
+              </div>
+              <hr className="flex w-[330px] h-[10px]  border-black" />
+              <div
+                onClick={handlerClick}
+                className="bg-[#42b72a] text-white w-[194px] h-[48px] rounded-md flex justify-center items-center font-medium text-[18px] py-4"
+              >
+                Create new account
+              </div>
+            </div>
+            <div className="flex justify-center mt-7 text-black">
+              Create a Page for a celebrity, brand or business.
+            </div>
+          </div>
         </div>
       </div>
-
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-full sm:before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full sm:after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700/10 after:dark:from-sky-900 after:dark:via-[#0141ff]/40 before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Discover and deploy boilerplate example Next.js&nbsp;projects.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50 text-balance`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+      {module && (
+        <div className="w-screen h-screen z-10 absolute bg-[rgb(0,0,0,0.4)] flex items-center justify-center">
+          <div className="w-[432px] h-[544px] bg-white rounded-lg ">
+            <div className=" border-b-[1px] border-slate-400 pb-2.5 px-4 py-2.5">
+              <div className="flex space-x-[255px]">
+                <h1 className=" text-bold text-[32px] font-bold text-black -mt-3">
+                  Sign Up
+                </h1>
+                <div>
+                  <Image src="/x.png" width={24} height={24} />
+                </div>
+              </div>
+              <div className="text-[#606770] -mt-1">It's quick and easy</div>
+            </div>
+            <div className="w-[400px] h-[438px] m-4 flex flex-col gap-[10px]">
+              <div className="flex space-x-[12px]">
+                <input
+                  placeholder="First name"
+                  className="p-2 border-2 border-space-200 rounded-[5px] w-[194px] h-[40px] "
+                />
+                <input
+                  placeholder="Surname"
+                  className="p-2 border-2 border-space-200 rounded-[5px] w-[194px] h-[40px] "
+                />
+              </div>
+              <div>
+                <input
+                  placeholder="Mobile number or email address"
+                  className="p-2 border-2 border-space-200 rounded-[5px] w-[399px] h-[40px] "
+                />
+              </div>
+              <div>
+                <input
+                  placeholder="New password"
+                  className="p-2 border-2 border-space-200 rounded-[5px] w-[399px] h-[40px] "
+                />
+              </div>
+              <div>
+                <div className="text-[#606770] text-[12px]"> Date of birth</div>
+                <div className="flex">
+                  <input
+                    placeholder="New password"
+                    className="p-2 border-2 border-space-200 rounded-[5px] w-[125px] h-[36px] "
+                  />
+                </div>
+              </div>
+              <div>
+                <div className="text-[#606770] text-[12px]">Gender</div>
+                <div className="w-[125px] h-[36px]">
+                  <input
+                    placeholder="New password"
+                    className="p-2 border-2 border-space-200 rounded-[5px] w-[125px] h-[36px] "
+                  />
+                </div>
+              </div>
+              <div className=" text-[11px] text-[#777]">
+                People who use our service may have uploaded your contact
+                information to Facebook.
+              </div>
+              <div className=" text-[11px] text-[#777]">
+                By clicking Sign Up, you agree to our Terms, Privacy Policy and
+                Cookies Policy. You may receive SMS notifications from us and
+                can opt out at any time.
+              </div>
+              <div className="w-[194px] h-[36px] bg-[#00a400] rounded-md text-[18px] font-bold flex justify-center items-center ml-[95px] mt-3">
+                Sign Up
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+    </div>
   );
 }
+
+//  <input className="w-10 h-10 bg-red-500" type="radio" />
