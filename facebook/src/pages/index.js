@@ -58,7 +58,7 @@ export default function Home() {
                 <h1 className=" text-bold text-[32px] font-bold text-black -mt-3">
                   Sign Up
                 </h1>
-                <div>
+                <div onClick={handlerClick}>
                   <Image src="/x.png" width={24} height={24} />
                 </div>
               </div>
@@ -89,20 +89,105 @@ export default function Home() {
               </div>
               <div>
                 <div className="text-[#606770] text-[12px]"> Date of birth</div>
-                <div className="flex">
-                  <input
-                    placeholder="New password"
-                    className="p-2 border-2 border-space-200 rounded-[5px] w-[125px] h-[36px] "
-                  />
+                <div className="flex space-x-4">
+                  <select
+                    name="cars"
+                    id="cars"
+                    className="w-[125px] h-[36px] p-2 border rounded"
+                  >
+                    <option value="volvo">Jan</option>
+                    <option value="saab">Feb</option>
+                    <option value="opel">Mar</option>
+                    <option value="audi">April</option>
+                    <option value="volvo">May</option>
+                    <option value="saab">June</option>
+                    <option value="opel">July</option>
+                    <option value="audi">August</option>
+                    <option value="volvo">Sep</option>
+                    <option value="saab">Octob</option>
+                    <option value="opel">November</option>
+                    <option value="audi">December</option>
+                  </select>
+
+                  <select
+                    name="cars"
+                    id="cars"
+                    className="w-[125px] h-[36px] p-2 border rounded"
+                  >
+                    <option value="volvo">1</option>
+                    <option value="saab">2</option>
+                    <option value="opel">3</option>
+                    <option value="audi">4</option>
+                    <option value="volvo">5</option>
+                    <option value="saab">6</option>
+                    <option value="opel">7</option>
+                    <option value="audi">8</option>
+                    <option value="volvo">9</option>
+                    <option value="saab">10</option>
+                    <option value="opel">11</option>
+                    <option value="audi">12</option>
+                  </select>
+                  <form action="/action_page.php">
+                    <select
+                      name="cars"
+                      id="cars"
+                      className="w-[125px] h-[36px] p-2 border rounded"
+                    >
+                      <option value="volvo">1990</option>
+                      <option value="saab">1991</option>
+                      <option value="opel">1992</option>
+                      <option value="audi">1993</option>
+                      <option value="volvo">1994</option>
+                      <option value="saab">1995</option>
+                      <option value="opel">1996</option>
+                      <option value="audi">1997</option>
+                      <option value="volvo">1998</option>
+                      <option value="saab">1999</option>
+                      <option value="opel">2000</option>
+                      <option value="audi">2001</option>
+                    </select>
+                  </form>
                 </div>
               </div>
-              <div>
+              <div className="">
                 <div className="text-[#606770] text-[12px]">Gender</div>
-                <div className="w-[125px] h-[36px]">
-                  <input
-                    placeholder="New password"
-                    className="p-2 border-2 border-space-200 rounded-[5px] w-[125px] h-[36px] "
-                  />
+                <div className="flex space-x-2">
+                  <div className="flex">
+                    <div className="w-[128.28px] h-[36px] border rounded flex items-center space-x-[45px]">
+                      <div className="ml-2">Female</div>
+                      <input
+                        className="ml-[00px]"
+                        type="radio"
+                        id="html"
+                        name="fav_language"
+                        value="HTML"
+                      ></input>
+                    </div>
+                  </div>
+                  <div className="flex">
+                    <div className="w-[128.28px] h-[36px] border rounded flex items-center space-x-[62px]">
+                      <div className="ml-2">Male</div>
+                      <input
+                        className="ml-[00px]"
+                        type="radio"
+                        id="html"
+                        name="fav_language"
+                        value="HTML"
+                      ></input>
+                    </div>
+                  </div>
+                  <div className="flex">
+                    <div className="w-[128.28px] h-[36px] border rounded flex items-center space-x-[41px]">
+                      <div className="ml-2">Custom</div>
+                      <input
+                        className="ml-[00px]"
+                        type="radio"
+                        id="html"
+                        name="fav_language"
+                        value="HTML"
+                      ></input>
+                    </div>
+                  </div>
                 </div>
               </div>
               <div className=" text-[11px] text-[#777]">
@@ -114,7 +199,7 @@ export default function Home() {
                 Cookies Policy. You may receive SMS notifications from us and
                 can opt out at any time.
               </div>
-              <div className="w-[194px] h-[36px] bg-[#00a400] rounded-md text-[18px] font-bold flex justify-center items-center ml-[95px] mt-3">
+              <div className="w-[194px] h-[36px] bg-[#00a400] rounded-md text-[18px] font-bold flex justify-center items-center ml-[95px] mt-3 text-white">
                 Sign Up
               </div>
             </div>
@@ -124,5 +209,3 @@ export default function Home() {
     </div>
   );
 }
-
-//  <input className="w-10 h-10 bg-red-500" type="radio" />
